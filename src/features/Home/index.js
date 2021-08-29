@@ -17,7 +17,7 @@ function Home() {
               Paranavithana
             </span>
           </div>
-          <img src={dpImage} alt="dp" className="home__dp" />
+          <img src={dpImage} height="814" width="819" alt="dp" className="home__dp" />
         </div>
       </section>
     </div>

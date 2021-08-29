@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { connect } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import toggleIcon from '../assets/icons/darkModeToggle.svg';
 import linkedinIcon from '../assets/icons/linkedin.svg';
 import githubIcon from '../assets/icons/github.svg';
 import behanceIcon from '../assets/icons/behance.svg';
 import facebookIcon from '../assets/icons/facebook.svg';
+import * as appActions from '../store/AppStore/actions';
 
 export const Header = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const isDarkMode = useSelector((state) => state.app.isDarkMode);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (
@@ -16,22 +18,22 @@ export const Header = () => {
         window.matchMedia('(prefers-color-scheme: dark)').matches)
     ) {
       document.documentElement.classList.add('dark');
-      setIsDarkMode(true);
+      dispatch(appActions.setDarkModeStatus(true));
     } else {
       document.documentElement.classList.remove('dark');
-      setIsDarkMode(false);
+      dispatch(appActions.setDarkModeStatus(false));
     }
-  }, []);
+  }, [dispatch]);
 
   const handleToggle = () => {
     if (localStorage.theme !== 'dark') {
       document.documentElement.classList.add('dark');
       localStorage.theme = 'dark';
-      setIsDarkMode(true);
+      dispatch(appActions.setDarkModeStatus(true));
     } else {
       document.documentElement.classList.remove('dark');
       localStorage.removeItem('theme');
-      setIsDarkMode(false);
+      dispatch(appActions.setDarkModeStatus(false));
     }
   };
 
@@ -52,36 +54,36 @@ export const Header = () => {
         <img
           src={githubIcon}
           alt="github-icon"
-          onClick={()=> window.open("https://github.com/sivantha96", "_blank")}
+          onClick={() => window.open('https://github.com/sivantha96', '_blank')}
           className="header__icon transition-all dark:filter-dark	"
         />
         <img
           src={linkedinIcon}
           alt="linkedin-icon"
-          onClick={()=> window.open("https://www.linkedin.com/in/sivantha96/", "_blank")}
+          onClick={() =>
+            window.open('https://www.linkedin.com/in/sivantha96/', '_blank')
+          }
           className="header__icon transition-all dark:filter-dark	"
         />
         <img
           src={behanceIcon}
           alt="behance-icon"
-          onClick={()=> window.open("https://www.behance.net/sivantha96", "_blank")}
+          onClick={() =>
+            window.open('https://www.behance.net/sivantha96', '_blank')
+          }
           className="header__icon transition-all dark:filter-dark	"
         />
         <img
           src={facebookIcon}
           alt="facebook-icon"
-          onClick={()=> window.open("https://www.facebook.com/sivantha96/", "_blank")}
+          onClick={() =>
+            window.open('https://www.facebook.com/sivantha96/', '_blank')
+          }
           className="header__icon transition-all dark:filter-dark	"
         />
-        
-        
       </div>
     </div>
   );
 };
 
-const mapStateToProps = (state) => ({});
-
-const mapDispatchToProps = {};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default Header;

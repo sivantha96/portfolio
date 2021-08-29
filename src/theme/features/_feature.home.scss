@@ -1,11 +1,13 @@
 .home {
   &__dp {
     height: 45vmin;
+    width: auto;
   }
 
   &__greet {
     font-size: 4vmin;
     line-height: 5vmin;
+    font-weight: 200;
   }
 
   &__name {
@@ -17,6 +19,7 @@
     &--last {
       font-size: 6vmin;
       line-height: 6vmin;
+      font-weight: 200;
     }
   }
 }
