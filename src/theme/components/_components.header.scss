@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  background: none;
+  position: fixed;
+  width: 100%;
+
+  &__content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: auto;
+    padding: 1.5rem 0;
+  }
+
+  &__icon {
+    height: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  &__toggle {
+
+    &--rotate-180 {
+      transform: rotate(180deg);
+      filter: invert(0);
+    }
+
+    &--rotate-0 {
+      transform: rotate(0deg);
+      filter: invert(1);
+    }
+  }
+}

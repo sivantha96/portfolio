@@ -1,0 +1,11 @@
+@import './settings/settings.color';
+@import './settings/settings.fonts';
+@import './generics/generics.page';
+@import './components/components.header';
+@import './components/components.header';
+@import './features/feature.home';
+@import './utilities/utilities.tailwind';
+
+* {
+  font-family: $ff-regular;
+}
