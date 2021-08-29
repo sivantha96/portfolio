@@ -1,5 +1,5 @@
 import React from 'react';
-import dpImage from '../../assets/images/dp.svg';
+import dpImage from '../../assets/images/dp.png';
 
 function Home() {
   return (
