@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @variants dark {
+    .filter-light {
+      filter: invert(0);
+    }
+    .filter-dark {
+      filter: invert(1);
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.home {
+  &__dp {
+    height: 45vmin;
+  }
+
+  &__greet {
+    font-size: 4vmin;
+    line-height: 5vmin;
+  }
+
+  &__name {
+    &--first {
+      font-size: 7vmin;
+      line-height: 8vmin;
+    }
+
+    &--last {
+      font-size: 6vmin;
+      line-height: 6vmin;
+    }
+  }
+}
