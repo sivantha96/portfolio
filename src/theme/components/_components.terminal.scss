@@ -1,0 +1,81 @@
+.terminal {
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  height: 30vh;
+  background-color: $black-color;
+  overflow: auto;
+  white-space: pre;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__header {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+    background-color: $gray-color;
+  }
+
+  &__content {
+    font-family: $ff-monospace;
+    color: $white-color;
+    border: none;
+    outline: none;
+    white-space: pre;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+  }
+
+  &__input {
+    background-color: $black-color;
+    color: $white-color;
+    font-family: $ff-monospace;
+    outline: none;
+    border: none !important;
+    resize: none;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+  }
+
+  &__value {
+    white-space: pre;
+    font-size: 14px;
+    font-family: $ff-monospace;
+    line-height: 18px;
+    font-weight: 500;
+  }
+
+  &__spacer {
+    padding-bottom: 30vh;
+  }
+
+  &__prefix {
+    font-size: 14px;
+    font-family: $ff-monospace;
+    line-height: 18px;
+    font-weight: 500;
+  }
+
+  &__icon {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+
+    &__container {
+      cursor: pointer;
+      padding: 5px;
+      margin-right: 10px;
+    }
+  }
+}

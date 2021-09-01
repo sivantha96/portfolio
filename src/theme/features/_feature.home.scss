@@ -12,8 +12,8 @@
 
   &__name {
     &--first {
-      font-size: 7vmin;
-      line-height: 8vmin;
+      font-size: 6vmin;
+      line-height: 7vmin;
     }
 
     &--last {
@@ -21,5 +21,13 @@
       line-height: 6vmin;
       font-weight: 200;
     }
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 30px;
   }
 }

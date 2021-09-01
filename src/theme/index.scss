@@ -1,11 +1,16 @@
+// settings
 @import './settings/settings.color';
 @import './settings/settings.fonts';
+
+// generics
 @import './generics/generics.page';
-@import './components/components.header';
-@import './components/components.header';
-@import './features/feature.home';
+
+// utilities
 @import './utilities/utilities.tailwind';
 
-* {
-  font-family: 'Inter', sans-serif;
-}
+// features
+@import './features/feature.home';
+
+// components
+@import './components/components.terminal';
+@import './components/components.header';
