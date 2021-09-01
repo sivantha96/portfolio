@@ -4,6 +4,7 @@ import * as types from './types';
 const initialState = {
   isLoading: false,
   isDarkMode: false,
+  isTerminalActive: false,
 };
 
 // Redux Toolkit is using immer.js
@@ -17,5 +18,8 @@ export const appReducer = createReducer(initialState, {
   },
   [types.SET_DARK_MODE_STATUS]: (state, action) => {
     state.isDarkMode = action.payload;
+  },
+  [types.TOGGLE_TERMINAL]: (state, action) => {
+    state.isTerminalActive = !state.isTerminalActive;
   },
 });
