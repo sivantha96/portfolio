@@ -24,8 +24,8 @@ const Terminal = () => {
   const [commandLines, setCommandLines] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [currentLineNo, setCurrentLineNo] = useState(0);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [, setEmail] = useState('');
+  const [, setPassword] = useState('');
   const [submitType, setSubmitType] = useState('text');
   const textInput = useRef(null);
   const dispatch = useDispatch();
