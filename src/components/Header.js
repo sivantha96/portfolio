@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import toggleIcon from '../assets/icons/darkModeToggle.svg';
 import terminalIcon from '../assets/icons/terminal.svg';
-
 import linkedinIcon from '../assets/icons/linkedin.svg';
 import githubIcon from '../assets/icons/github.svg';
 import behanceIcon from '../assets/icons/behance.svg';
@@ -57,10 +56,10 @@ export const Header = () => {
           />
           <img
             src={terminalIcon}
-            id="dark-mode-toggle"
-            className="header__icon transition-all dark:filter-dark	"
+            id="terminal-toggle"
+            className="header__icon transition-all dark:filter-dark	invisible md:visible"
             onClick={() => dispatch(appActions.toggleTerminal())}
-            alt="dark-mode-toggle"
+            alt="terminal-toggle"
             height="20"
             width="20"
           />

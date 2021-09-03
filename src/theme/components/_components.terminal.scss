@@ -3,7 +3,7 @@
   z-index: 999;
   bottom: 0;
   height: 30vh;
-  background-color: $black-color;
+  background-color: $clr-black;
   overflow: auto;
   white-space: pre;
   -ms-overflow-style: none;
@@ -21,12 +21,12 @@
     align-items: center;
     padding-bottom: 7px;
     margin-bottom: 10px;
-    background-color: $gray-color;
+    background-color: $clr-gray;
   }
 
   &__content {
     font-family: $ff-monospace;
-    color: $white-color;
+    color: $clr-white;
     border: none;
     outline: none;
     white-space: pre;
@@ -38,8 +38,8 @@
   }
 
   &__input {
-    background-color: $black-color;
-    color: $white-color;
+    background-color: $clr-black;
+    color: $clr-white;
     font-family: $ff-monospace;
     outline: none;
     border: none !important;
