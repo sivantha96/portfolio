@@ -1,0 +1,14 @@
+.pf-link {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 1.5rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 0.7;
+    color: $clr-primary;
+  }
+}

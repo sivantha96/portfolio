@@ -1,0 +1,49 @@
+.pf-mouse-scroll {
+  display: block;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  opacity: 0.5;
+  position: absolute;
+  bottom: 2rem;
+  transition: all ease;
+
+  &__mouse {
+    height: 34px;
+    width: 20px;
+    border-radius: 14px;
+    transform: none;
+    border: 2px solid currentColor;
+    top: 170px;
+    margin-bottom: 4px;
+  }
+
+  &__wheel {
+    height: 5px;
+    width: 2px;
+    display: block;
+    margin: 5px auto;
+    background: currentColor;
+    position: relative;
+    border: 2px solid currentColor;
+    border-radius: 8px;
+  }
+
+  &__arrow {
+    display: block;
+    transform: rotate(45deg);
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    margin: auto;
+    width: 8px;
+    height: 8px;
+    margin-bottom: 0.5rem;
+  }
+
+  &__text {
+    white-space: nowrap;
+    font-size: 12px;
+  }
+}

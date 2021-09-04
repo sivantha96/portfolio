@@ -1,33 +1,40 @@
-.home {
-  &__dp {
-    height: 45vmin;
-    width: auto;
-  }
+.pf-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  &__greet {
-    font-size: 4vmin;
-    line-height: 5vmin;
-    font-weight: 200;
-  }
-
-  &__name {
-    &--first {
-      font-size: 6vmin;
-      line-height: 7vmin;
+  &__landing {
+    &__dp {
+      height: 45vmin;
+      width: auto;
     }
 
-    &--last {
-      font-size: 6vmin;
-      line-height: 6vmin;
-      font-weight: 200;
+    &__greet {
+      font-size: 4vmin;
+      line-height: 5vmin;
+      font-weight: 300;
     }
-  }
 
-  &__description {
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: 300;
-    text-align: center;
-    margin-top: 30px;
+    &__name {
+      &--first {
+        font-size: 6vmin;
+        line-height: 7vmin;
+      }
+
+      &--last {
+        font-size: 6vmin;
+        line-height: 6vmin;
+        font-weight: 300;
+      }
+    }
+
+    &__description {
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 300;
+      text-align: center;
+      margin-top: 30px;
+    }
   }
 }
