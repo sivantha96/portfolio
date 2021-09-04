@@ -29,9 +29,6 @@
     position: relative;
     border: 2px solid currentColor;
     border-radius: 8px;
-    -webkit-animation: mouse-wheel 0.6s linear infinite;
-    -moz-animation: mouse-wheel 0.6s linear infinite;
-    animation: mouse-wheel 0.6s linear infinite;
   }
 
   &__arrow {
@@ -42,12 +39,6 @@
     margin: auto;
     width: 8px;
     height: 8px;
-    -webkit-animation: mouse-scroll 1s linear infinite;
-    -moz-animation: mouse-scroll 1s linear infinite;
-    animation: mouse-scroll 1s linear infinite;
-    -webkit-animation-direction: alternate;
-    animation-direction: alternate;
-    animation-delay: 0.1s;
     margin-bottom: 0.5rem;
   }
 

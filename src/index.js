@@ -5,7 +5,6 @@ import App from './App';
 import store from './store';
 
 import './theme/index.scss';
-import 'semantic-ui-css/semantic.min.css';
 
 ReactDOM.render(
   <React.StrictMode>

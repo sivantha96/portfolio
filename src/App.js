@@ -8,14 +8,11 @@ import Terminal from './components/Terminal';
 function App() {
   const isTerminalActive = useSelector((state) => state.app.isTerminalActive);
   const terminal = isTerminalActive ? <Terminal /> : null;
-
+  const spacer = isTerminalActive ? (
+    <div className="pf-terminal__spacer"></div>
+  ) : null;
   return (
-    <div
-      id="App"
-      className={`bg-white dark:bg-gray-800 min-h-screen ${
-        isTerminalActive ? 'terminal__spacer' : ''
-      }`}
-    >
+    <div id="App" className="bg-white dark:bg-gray-800 min-h-screen">
       <Header />
       <Router>
         <AuthProvider>
@@ -24,6 +21,7 @@ function App() {
           </Switch>
         </AuthProvider>
       </Router>
+      {spacer}
       {terminal}
     </div>
   );

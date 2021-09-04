@@ -31,7 +31,6 @@ const Terminal = () => {
   const dispatch = useDispatch();
 
   const handleInLineLogin = (command) => {
-    debugger;
     const commands = command.split(' ');
     if (commands[1] && commands[2]) {
       if (
@@ -130,6 +129,7 @@ const Terminal = () => {
     const commands = command.split(' ');
     switch (commands[0]) {
       case 'login':
+        debugger;
         if (commands[1] && commands[1].startsWith('--')) {
           handleInLineLogin(command);
         } else {
@@ -204,7 +204,7 @@ const Terminal = () => {
           ...terminalValues,
           {
             status: STATUS.ERROR,
-            value: MESSAGES.email_not_valid,
+            value: MESSAGES.email_not_valid(input),
           },
         ]);
         break;
@@ -242,6 +242,7 @@ const Terminal = () => {
   const scrollToInput = () => {
     setTimeout(() => {
       textInput?.current?.scrollIntoView();
+      textInput?.current?.focus();
     }, 200);
   };
 
@@ -249,24 +250,27 @@ const Terminal = () => {
     if (e.key === 'ArrowDown' && currentLineNo < commandLines.length - 1) {
       setCurrentLine(commandLines[currentLineNo + 1]);
       setCurrentLineNo(currentLineNo + 1);
+      scrollToInput();
     }
 
     if (e.key === 'ArrowDown' && currentLineNo === commandLines.length - 1) {
       setCurrentLine('');
       setCurrentLineNo(currentLineNo + 1);
+      scrollToInput();
     }
 
     if (e.key === 'ArrowUp' && currentLineNo > 0) {
       setCurrentLine(commandLines[currentLineNo - 1]);
       setCurrentLineNo(currentLineNo - 1);
+      scrollToInput();
     }
   };
 
   const handleOnPressKey = (e) => {
     if (e.key === 'Enter') {
       const tempCurrentLine = currentLine;
+      setCurrentLineNo(commandLines.length + 1);
       setCommandLines([...commandLines, tempCurrentLine]);
-      setCurrentLineNo(currentLineNo + 1);
       terminalValues.push({
         status: STATUS.DEFAULT,
         value: `~ $ ${currentLine}`,
@@ -293,7 +297,7 @@ const Terminal = () => {
       <span
         key={index.toString()}
         style={styles.value(item.status)}
-        className="terminal__value"
+        className="pf-terminal__value"
         onClick={() => {
           textInput?.current?.focus();
         }}
@@ -305,27 +309,27 @@ const Terminal = () => {
 
   return (
     <div
-      className="w-full terminal flex flex-col"
+      className="w-full pf-terminal flex flex-col"
       onClick={() => {
         textInput?.current?.focus();
       }}
     >
-      <div className="terminal__header">
+      <div className="pf-terminal__header">
         <div
-          className="terminal__icon__container hover:opacity-50"
+          className="pf-terminal__icon__container hover:opacity-50"
           onClick={() => dispatch(appActions.toggleTerminal())}
         >
           <img
             src={minimizeIcon}
             id="dark-mode-toggle"
-            className="filter-dark terminal__icon"
+            className="filter-dark pf-terminal__icon"
             alt="dark-mode-toggle"
             height="20"
             width="20"
           />
         </div>
       </div>
-      <div className="terminal__content">
+      <div className="pf-terminal__content">
         {renderTerminalValues()}
 
         {!isLoading && (
@@ -335,14 +339,20 @@ const Terminal = () => {
               textInput?.current?.focus();
             }}
           >
-            <span className="terminal__prefix">{`~ $ `}</span>
+            <span className="pf-terminal__prefix">{`~ $ `}</span>
             <input
               autoComplete="off"
+              onFocus={(e) =>
+                e.currentTarget.setSelectionRange(
+                  e.currentTarget.value.length,
+                  e.currentTarget.value.length
+                )
+              }
               autoFocus
               type={submitType}
               spellCheck="false"
               name="terminal"
-              className="terminal__input w-full"
+              className="pf-terminal__input w-full"
               ref={textInput}
               value={currentLine}
               onKeyDown={handleOnKeyDown}
