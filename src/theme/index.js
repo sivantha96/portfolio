@@ -8,6 +8,7 @@ import redux from '../assets/icons/redux.svg';
 import reduxSaga from '../assets/icons/redux-saga.svg';
 import bootstrap from '../assets/icons/bootstrap.svg';
 import ngrx from '../assets/icons/ngrx.svg';
+import chevron from '../assets/icons/chevron.svg';
 
 import genie from '../assets/images/genie.png';
 import protech from '../assets/images/protech.png';
@@ -45,4 +46,5 @@ export const Icons = {
   reduxSaga,
   bootstrap,
   ngrx,
+  chevron
 };

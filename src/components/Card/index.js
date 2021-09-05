@@ -13,6 +13,7 @@ function Card({
   cardsInView,
 }) {
   const [isVisible, setIsVisible] = useState(false);
+  const [isInfoExpanded, setIsInfoExpanded] = useState(false);
 
   useEffect(() => {
     const index = cardsInView.indexOf(id.toString());
@@ -51,6 +52,19 @@ function Card({
     }
   };
 
+  const infoStyle = {
+    top: isVisible || isInfoExpanded? '0' : undefined,
+    marginTop: isInfoExpanded ? '0' : '15rem',
+  };
+
+  const chevronStyle = {
+    transform: isInfoExpanded ? 'rotate(90deg)' : 'rotate(-90deg)',
+  };
+
+  const moreInfo = isInfoExpanded ? (
+    <div style={{ height: '15rem', width: '100%' }}></div>
+  ) : null;
+
   return (
     <div
       id={id}
@@ -65,18 +79,31 @@ function Card({
         alt="background"
       />
       <div
-        style={{
-          transform: isVisible ? 'translateY(0)' : undefined,
-          opacity: isVisible ? '1' : undefined,
-        }}
+        style={infoStyle}
         className="pf-card__info transform-gpu bg-white bg-opacity-70 dark:bg-black dark:bg-opacity-70 backdrop-filter backdrop-brightness-90 backdrop-blur-lg"
       >
-        <span className="pf-card__name text-opacity-80 text-black dark:text-white dark:text-opacity-80">
-          {name}
-        </span>
+        <div className="flex justify-between">
+          <span className="pf-card__name text-opacity-80 text-black dark:text-white dark:text-opacity-80">
+            {name}
+          </span>
+          <img
+            src={Icons.chevron}
+            id="chevron"
+            style={chevronStyle}
+            className="cursor-pointer duration-500 hover:opacity-50 w-8 h-8 dark:filter-dark hover:fill-current transition-all transform-gpu bottom-4 left-4 relative"
+            alt="chevron"
+            height="32"
+            width="32"
+            onClick={() => {
+              setIsInfoExpanded(!isInfoExpanded);
+            }}
+          />
+        </div>
+
         <span className="pf-card__description text-opacity-80 text-black dark:text-white dark:text-opacity-80">
           {description}
         </span>
+        {moreInfo}
         <div className="pf-card__footer">
           <div className="pf-card__icon__container">{renderIcons()}</div>
         </div>
