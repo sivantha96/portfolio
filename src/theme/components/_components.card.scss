@@ -1,5 +1,7 @@
+@use '../settings/settings.colors' as colors;
+
 .pf-card {
-  box-shadow: $clr_black-15 0px 1px 36px 0px;
+  box-shadow: colors.$clr_black-15 0px 1px 36px 0px;
   width: 80%;
   border-radius: 15px;
   overflow: hidden;

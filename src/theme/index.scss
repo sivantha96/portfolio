@@ -1,20 +1,5 @@
-// settings
-@import './settings/settings.color';
-@import './settings/settings.fonts';
-
-// generics
-@import './generics/generics.page';
-
-// utilities
-@import './utilities/utilities.tailwind';
-
-// features
-@import './features/feature.home';
-
-// components
-@import './components/components.terminal';
-@import './components/components.header';
-@import './components/components.link';
-@import './components/components.mouse-scroll';
-@import './components/components.card';
-@import './components/components.button';
+@use './settings';
+@use './generics';
+@use './components';
+@use './features';
+@use './trumps';

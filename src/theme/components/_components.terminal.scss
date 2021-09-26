@@ -1,9 +1,12 @@
+@use '../settings/settings.colors' as colors;
+@use '../settings/settings.fonts' as fonts;
+
 .pf-terminal {
   position: fixed;
   z-index: 999;
   bottom: 0;
   height: 30vh;
-  background-color: $clr-black;
+  background-color: colors.$clr-black;
   overflow: auto;
   white-space: pre;
   -ms-overflow-style: none;
@@ -21,12 +24,12 @@
     align-items: center;
     padding-bottom: 7px;
     margin-bottom: 10px;
-    background-color: $clr-gray;
+    background-color: colors.$clr-gray;
   }
 
   &__content {
-    font-family: $ff-monospace;
-    color: $clr-white;
+    font-family: fonts.$ff-monospace;
+    color: colors.$clr-white;
     border: none;
     outline: none;
     white-space: pre;
@@ -38,9 +41,9 @@
   }
 
   &__input {
-    background-color: $clr-black;
-    color: $clr-white;
-    font-family: $ff-monospace;
+    background-color: colors.$clr-black;
+    color: colors.$clr-white;
+    font-family: fonts.$ff-monospace;
     outline: none;
     border: none !important;
     resize: none;
@@ -52,7 +55,7 @@
   &__value {
     white-space: pre;
     font-size: 14px;
-    font-family: $ff-monospace;
+    font-family: fonts.$ff-monospace;
     line-height: 18px;
     font-weight: 500;
   }
@@ -64,7 +67,7 @@
 
   &__prefix {
     font-size: 14px;
-    font-family: $ff-monospace;
+    font-family: fonts.$ff-monospace;
     line-height: 18px;
     font-weight: 500;
   }
