@@ -129,9 +129,16 @@ const Terminal = () => {
     const commands = command.split(' ');
     switch (commands[0]) {
       case 'login':
-        debugger;
         if (commands[1] && commands[1].startsWith('--')) {
           handleInLineLogin(command);
+        } else if (commands[1]) {
+          setTerminalValues([
+            ...terminalValues,
+            {
+              status: STATUS.ERROR,
+              value: MESSAGES.invalid_command(commands[1]),
+            },
+          ]);
         } else {
           setTerminalValues([
             ...terminalValues,

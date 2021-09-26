@@ -11,6 +11,8 @@ const cards = [
     icons: ['angular', 'bootstrap'],
     image: Images.gifting,
     color: Colors.bg_gifting,
+    moreDescription:
+      'I have worked as a frontend developer in this project. I mainly did the UI development and API integration parts using Angular and Bootstrap frameworks.',
   },
   {
     id: 1,
@@ -20,6 +22,8 @@ const cards = [
     icons: ['angular', 'bootstrap'],
     image: Images.protech,
     color: Colors.bg_protech,
+    moreDescription:
+      'I have worked as a frontend lead developer in this project. I was directly engaging with the customer and other stakeholders and also led a team of 5.',
   },
   {
     id: 2,
@@ -29,6 +33,8 @@ const cards = [
     icons: ['mongo', 'express', 'angular', 'node', 'bootstrap'],
     image: Images.podime,
     color: Colors.bg_podime,
+    moreDescription:
+      'I have worked as a frontend developer in this project. I mainly did the UI development and API integration parts using Angular and Bootstrap frameworks.',
   },
   {
     id: 4,
@@ -38,6 +44,8 @@ const cards = [
     icons: ['angular', 'ngrx', 'bootstrap'],
     image: Images.genie,
     color: Colors.bg_genie,
+    moreDescription:
+      'I have worked as a frontend developer in this project. I mainly did the UI development and API integration parts using Angular and Bootstrap frameworks.',
   },
   {
     id: 5,
@@ -46,6 +54,8 @@ const cards = [
     icons: ['reactNative', 'redux', 'reduxSaga'],
     image: Images.xlife,
     color: Colors.bg_xlife,
+    moreDescription:
+      'I have worked as a frontend developer in this project. I mainly did the UI development and API integration parts using Angular and Bootstrap frameworks.',
   },
   {
     id: 6,
@@ -54,6 +64,8 @@ const cards = [
     icons: ['reactNative', 'redux', 'reduxSaga'],
     image: Images.jlife,
     color: Colors.bg_jlife,
+    moreDescription:
+      'I have worked as a frontend developer in this project. I mainly did the UI development and API integration parts using Angular and Bootstrap frameworks.',
   },
 ];
 
