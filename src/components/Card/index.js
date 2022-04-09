@@ -7,6 +7,7 @@ function Card({
   image,
   name,
   description,
+  extraInfo,
   color,
   icons,
   id,
@@ -53,7 +54,7 @@ function Card({
   };
 
   const infoStyle = {
-    top: isVisible || isInfoExpanded? '0' : undefined,
+    top: isVisible || isInfoExpanded ? '0' : undefined,
     marginTop: isInfoExpanded ? '0' : '15rem',
   };
 
@@ -62,7 +63,12 @@ function Card({
   };
 
   const moreInfo = isInfoExpanded ? (
-    <div style={{ height: '15rem', width: '100%' }}></div>
+    <div
+      className="pt-3 pf-card__description text-opacity-80 text-black dark:text-white dark:text-opacity-80"
+      style={{ minHeight: '15rem', width: '100%' }}
+    >
+      {extraInfo}
+    </div>
   ) : null;
 
   return (
@@ -80,7 +86,7 @@ function Card({
       />
       <div
         style={infoStyle}
-        className="pf-card__info transform-gpu bg-white bg-opacity-70 dark:bg-black dark:bg-opacity-70 backdrop-filter backdrop-brightness-90 backdrop-blur-lg"
+        className="pf-card__info transition-all  transform-gpu bg-white bg-opacity-70 dark:bg-black dark:bg-opacity-70 backdrop-filter backdrop-brightness-90 backdrop-blur-lg"
       >
         <div className="flex justify-between">
           <span className="pf-card__name text-opacity-80 text-black dark:text-white dark:text-opacity-80">
@@ -115,6 +121,7 @@ function Card({
 Card.propTypes = {
   name: PropTypes.string,
   description: PropTypes.string,
+  extraInfo: PropTypes.string,
   icons: PropTypes.arrayOf(PropTypes.string),
   image: PropTypes.any,
   onPress: PropTypes.func,

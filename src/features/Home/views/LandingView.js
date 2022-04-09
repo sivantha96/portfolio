@@ -7,8 +7,12 @@ import MouseScroll from '../../../components/MouseScroll';
 export default function LandingView() {
   return (
     <section className="min-h-screen container flex justify-center items-center flex-col">
-      <div className="flex flex-row items-center">
-        <div className="flex flex-col">
+      <div
+        className="flex flex-row items-center"
+        data-relative-input="true"
+        id="scene"
+      >
+        <div className="flex flex-col" data-depth="0.2">
           <span className="text-opacity-60 text-black dark:text-white dark:text-opacity-60 pf-home__landing__greet">
             Hi, my name is
           </span>
@@ -24,7 +28,9 @@ export default function LandingView() {
           height="814"
           width="819"
           alt="dp"
+          id="scene-built"
           className="pf-home__landing__dp"
+          data-depth="0.2"
         />
       </div>
       <span className="text-opacity-60 text-black dark:text-white dark:text-opacity-60 pf-home__landing__description">
