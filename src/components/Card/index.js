@@ -11,6 +11,7 @@ function Card({
   color,
   icons,
   id,
+  link,
   cardsInView,
 }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -62,12 +63,22 @@ function Card({
     transform: isInfoExpanded ? 'rotate(90deg)' : 'rotate(-90deg)',
   };
 
-  const moreInfo = isInfoExpanded ? (
-    <div
-      className="pt-3 pf-card__description text-opacity-80 text-black dark:text-white dark:text-opacity-80"
-      style={{ minHeight: '15rem', width: '100%' }}
+  const demo = link ? (
+    <a
+      target="_blank"
+      href={link}
+      className="pf-card__demo cursor-pointer duration-500 text-opacity-80 hover:opacity-50 dark:filter-dark bg-white bg-opacity-50"
     >
-      {extraInfo}
+      View Project
+    </a>
+  ) : null;
+
+  const moreInfo = isInfoExpanded ? (
+    <div style={{ minHeight: '15rem', width: '100%' }}>
+      <div className="pt-3 pf-card__description text-opacity-80 text-black dark:text-white dark:text-opacity-80">
+        {extraInfo}
+      </div>
+      {demo}
     </div>
   ) : null;
 

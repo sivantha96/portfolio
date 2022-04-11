@@ -5,6 +5,7 @@ import mongo from '../assets/icons/mongo.svg';
 import react from '../assets/icons/react.svg';
 import reactNative from '../assets/icons/react-native.svg';
 import redux from '../assets/icons/redux.svg';
+import ngxs from '../assets/icons/ngxs.svg';
 import reduxSaga from '../assets/icons/redux-saga.svg';
 import bootstrap from '../assets/icons/bootstrap.svg';
 import ngrx from '../assets/icons/ngrx.svg';
@@ -41,6 +42,7 @@ export const Icons = {
   node,
   mongo,
   react,
+  ngxs,
   reactNative,
   redux,
   reduxSaga,

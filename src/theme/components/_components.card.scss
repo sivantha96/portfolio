@@ -54,6 +54,7 @@
     font-size: 0.8rem;
     line-height: 1rem;
     font-weight: 400;
+    margin-bottom: 20px;
   }
 
   &__footer {
@@ -80,5 +81,11 @@
       height: auto;
       margin-right: 1rem;
     }
+  }
+
+  &__demo {
+    padding: 8px 20px;
+    font-size: 12px;
+    border-radius: 40px;
   }
 }
