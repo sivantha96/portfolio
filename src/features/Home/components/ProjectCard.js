@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { Icons } from '../../theme';
+import { Icons } from '../../../theme';
 
-function Card({
+function ProjectCard({
   style,
   image,
   name,
@@ -18,7 +18,7 @@ function Card({
   const [isInfoExpanded, setIsInfoExpanded] = useState(false);
 
   useEffect(() => {
-    const index = cardsInView.indexOf(id.toString());
+    const index = cardsInView?.indexOf(id.toString());
     if (index > -1) {
       setIsVisible(true);
     } else {
@@ -27,7 +27,7 @@ function Card({
   }, [cardsInView, id]);
 
   const renderIcons = () => {
-    return icons.map((icon, index) => renderIcon(icon, index));
+    return icons?.map((icon, index) => renderIcon(icon, index));
   };
 
   const renderIcon = (icon, iconKey) => {
@@ -68,6 +68,7 @@ function Card({
       target="_blank"
       href={link}
       className="pf-card__demo cursor-pointer duration-500 text-opacity-80 hover:opacity-50 dark:filter-dark bg-white bg-opacity-50"
+      rel="noreferrer"
     >
       View Project
     </a>
@@ -129,7 +130,7 @@ function Card({
   );
 }
 
-Card.propTypes = {
+ProjectCard.propTypes = {
   name: PropTypes.string,
   description: PropTypes.string,
   extraInfo: PropTypes.string,
@@ -140,4 +141,4 @@ Card.propTypes = {
   cardsInView: PropTypes.array,
 };
 
-export default Card;
+export default ProjectCard;

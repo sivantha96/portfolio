@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import Card from '../../../components/Card';
 import { Colors, Images } from '../../../theme';
+import ProjectCard from '../components/ProjectCard';
 
 const projects = [
   {
@@ -130,7 +130,7 @@ export default function ProjectsView() {
     (id) => {
       const foundProject = projects.find((project) => project.id === id);
       return (
-        <Card
+        <ProjectCard
           {...foundProject}
           cardsInView={cardsInView}
           key={foundProject.id}

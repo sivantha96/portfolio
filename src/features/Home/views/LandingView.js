@@ -1,7 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import dpImage from '../../../assets/images/dp.png';
-import chevron from '../../../assets/icons/chevron.svg';
 import MouseScroll from '../../../components/MouseScroll';
 
 export default function LandingView() {
@@ -38,7 +36,7 @@ export default function LandingView() {
         <br />
         from Colombo, Sri Lanka.
       </span>
-      <Link className="pf-link" to="/about">
+      {/* <Link className="pf-link" to="/about">
         <span className="text-opacity-60 text-black dark:text-white dark:text-opacity-60">
           {' '}
           More about me
@@ -51,7 +49,7 @@ export default function LandingView() {
           height="20"
           width="20"
         />
-      </Link>
+      </Link> */}
 
       <MouseScroll />
     </section>
