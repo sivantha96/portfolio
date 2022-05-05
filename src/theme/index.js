@@ -17,6 +17,7 @@ import gifting from '../assets/images/gifting.png';
 import podime from '../assets/images/podime.png';
 import xlife from '../assets/images/xlife.png';
 import jlife from '../assets/images/jlife.png';
+import prjWiz from '../assets/images/project-wiz.png';
 
 export const Images = {
   genie,
@@ -25,6 +26,7 @@ export const Images = {
   podime,
   xlife,
   jlife,
+  prjWiz
 };
 
 export const Colors = {
@@ -34,6 +36,7 @@ export const Colors = {
   bg_genie: '#DACBFF',
   bg_xlife: '#A4CFFC',
   bg_jlife: '#F4D8B0',
+  bg_prjWiz: '#F7DF1E',
 };
 
 export const Icons = {

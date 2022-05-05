@@ -80,9 +80,31 @@ const projects = [
     link: 'https://apps.apple.com/us/app/janashakthi-life/id1583994799',
     color: Colors.bg_jlife,
   },
+  {
+    id: 7,
+    name: 'JS Project Wizard',
+    description: 'JavaScript project boilerplate generator',
+    extraInfo:
+      'This is a pet project of mine to generate customized project boilerplate. Currently it supports boilerplate generation for Express and React Native. \n\nThe frontend of this tool is hosted on GitHub pages and the backend is hosted on a Heroku server.',
+    icons: ['reactNative', 'redux', 'reduxSaga', 'mongo', 'express', 'node'],
+    image: Images.prjWiz,
+    link: 'https://sivantha96.github.io/js-project-wizard/',
+    color: Colors.bg_prjWiz,
+  },
+  {
+    id: 8,
+    name: 'Coachello',
+    description: 'JavaScript project boilerplate generator',
+    extraInfo:
+      'This is a pet project of mine to generate customized project boilerplate. Currently it supports boilerplate generation for Express and React Native. \n\nThe frontend of this tool is hosted on GitHub pages and the backend is hosted on a Heroku server.',
+    icons: ['reactNative', 'redux', 'reduxSaga', 'mongo', 'express', 'node'],
+    image: Images.prjWiz,
+    link: 'https://sivantha96.github.io/js-project-wizard/',
+    color: Colors.bg_prjWiz,
+  },
 ];
 
-const desktopLeft = [5, 0, 2];
+const desktopLeft = [5, 0, 2, 7];
 const desktopRight = [6, 1, 4, 3];
 
 export default function ProjectsView() {
